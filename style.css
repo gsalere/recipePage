@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+:root{
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+/* Títulos:   font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  
+  Texto: 
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;*/
+
+.sm-text{
+    font-family: 'Outfit', sans-serif;
+    color: var(--rose-800);
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.md-text{
+    font-family: 'Young Serif', serif ;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--brown-800);
+    font-size: 24px;
+}
+
+.lg-text{
+    font-family: 'Young Serif', sans-serif;
+    color: var(--stone-900);
+    font-size: 32px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p{
+    font-size: 16px;
+    font-family: 'Outfit', sans-serif;
+    color: var(--stone-600);
+    margin-bottom: 1rem;
+}
+
+body{
+    background-color: var(--stone-100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.recipe{
+    background-color: white;
+    padding: 2rem;
+    width: 40rem;
+    border-radius: 20px;
+    margin: 4rem;
+}
+
+
+img{
+    width: 40rem;
+    border-radius: 20px;
+}
+
+.preparationTime{
+    background-color: var(--rose-50);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.preparationTime li{
+    margin-left: 2rem;
+    color: var(--stone-600);
+    line-height: 2;
+    text-indent: 1rem;
+
+    
+}
+
+.ingredients li{
+    margin-left: 2rem;
+    color: var(--stone-600);
+    line-height: 2;
+    text-indent: 1rem;
+}
+
+.ingredients ul{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.ingredients ul li::marker{
+    color: var(--brown-800);
+}
+
+span{
+    color: var(--stone-600);
+    font-weight: 900;
+}
+
+.instructions{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.instructions ul{
+    margin: 1rem 0 1rem 1.5rem;
+    list-style-type: decimal;
+    color:var(--stone-600);    
+    font-family: 'Outfit', sans-serif;
+}
+
+.instructions li{
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.instructions ul li::marker{
+    color: var(--brown-800);
+    font-weight: 900;
+    font-family: 'Outfit', sans-serif;
+}
+
+
+.nutrition h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%; /* Faz a tabela ocupar 100% da largura do contêiner */
+    border-collapse: collapse; /* Remove espaços entre as bordas das células */
+    margin-bottom: 20px;
+}
+
+td, th {
+    padding: 12px 15px; /* Adiciona espaçamento dentro das células */
+    text-align: left; /* Alinha o texto à esquerda */
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+}
+
+tr{
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #ddd; /* Adiciona uma borda inferior para separar as linhas */
+    color: var(--brown-800);
+    font-weight: 900;
+}
+th {
+    background-color: #ffffff; /* Cor de fundo para o cabeçalho */
+    font-weight: light;
+    color:var(--stone-600);    /* Cor do texto no cabeçalho */
+}
+
+.attribution{
+    margin-bottom: 2rem;
+}
+/* Para telas pequenas (mobile) */
+@media (max-width: 768px) {
+    .recipe {
+        width: 90%; /* Reduz o tamanho da receita no mobile */
+        padding: 1rem; /* Menor padding */
+        margin: 2rem;
+    }
+
+    img {
+        width: 100%; /* Imagem ajustada ao container */
+    }
+
+    .lg-text {
+        font-size: 28px; /* Reduz o tamanho do texto grande */
+    }
+
+    .md-text {
+        font-size: 20px; /* Reduz o tamanho do texto médio */
+    }
+
+    .preparationTime, .ingredients {
+        padding: 1rem; /* Reduz o padding interno */
+    }
+}
+
+/* Para telas grandes (desktop) */
+@media (min-width: 769px) {
+    .recipe {
+        width: 40rem;
+    }
+
+    img {
+        width: 40rem;
+    }
+}
